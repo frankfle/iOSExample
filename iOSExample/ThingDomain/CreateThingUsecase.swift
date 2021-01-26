@@ -1,0 +1,3 @@
+protocol CreateThingUsecase {
+    func create()
+}

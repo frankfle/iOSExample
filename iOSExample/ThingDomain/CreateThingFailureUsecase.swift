@@ -1,0 +1,3 @@
+protocol CreateThingFailureUsecase {
+    func createFailure()
+}
