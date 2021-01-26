@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ThingDetailView: View {
 
+    @EnvironmentObject var viewModel: ThingListView.ViewModel
+
     var thing: Thing
     @State var isVisible = false
 
@@ -16,7 +18,16 @@ struct ThingDetailView: View {
         VStack {
             Text(thing.name)
             Toggle("Is Visible", isOn: $isVisible)
-        }
+            Button(action: { viewModel.updtateVisibility(thing: thing, visibility: isVisible) }, label: {
+                Text("SAVE")
+            })
+        }.padding()
+        .onAppear( perform: {
+            isVisible = thing.visible
+        })
+        .onDisappear(perform: {
+            viewModel.updtateVisibility(thing: thing, visibility: isVisible)
+        })
     }
 }
 

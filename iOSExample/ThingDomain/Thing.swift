@@ -5,6 +5,12 @@ struct Thing: Identifiable {
 
     let name: String
     let visible: Bool
+
+    init(id: UUID = UUID(), name: String, visible: Bool) {
+        self.id = id
+        self.name = name
+        self.visible = visible
+    }
 }
 
 enum ThingError: Error {

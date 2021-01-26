@@ -2,22 +2,27 @@ import SwiftUI
 
 struct ThingListView: View {
 
-    @ObservedObject var viewModel: ThingListView.ViewModel
+    @EnvironmentObject var viewModel: ThingListView.ViewModel
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.things) { thing in
-                    ThingListItem(thing: thing)
-                }
-
-                Text("\(viewModel.things.count) Thing(s)").foregroundColor(.gray)
-            }
-            .navigationBarItems(leading: createErrorButton, trailing: createThingButton)
-            .navigationTitle("Things")
+            listView
+                .navigationBarItems(leading: createErrorButton, trailing: createThingButton)
+                .navigationTitle("Things")
         }
         .onAppear(perform: { viewModel.getThings() })
         .alert(isPresented: $viewModel.alertPresent, content: { createAlert() })
+    }
+
+    @ViewBuilder
+    var listView: some View {
+        List {
+            ForEach(viewModel.things) { thing in
+                ThingListItem(thing: thing)
+            }
+
+            Text("\(viewModel.things.count) Thing(s)").foregroundColor(.gray)
+        }
     }
 
     @ViewBuilder
@@ -32,7 +37,6 @@ struct ThingListView: View {
                 Text("Create")})
     }
 
-
     func createAlert() -> Alert {
         Alert(title: Text("Error"),
               message: Text("An Error was encountered.  Please try again later."),
@@ -40,12 +44,11 @@ struct ThingListView: View {
                 viewModel.getThings()
                 viewModel.clearAlert()
               }))
-
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ThingListView(viewModel: .init())
+        ThingListView().environmentObject(ThingListView.ViewModel())
     }
 }

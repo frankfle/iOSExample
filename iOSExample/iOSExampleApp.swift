@@ -4,7 +4,7 @@ import SwiftUI
 struct iOSExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ThingListView(viewModel: .init())
+            ThingListView().environmentObject(ThingListView.ViewModel())
         }
     }
 }

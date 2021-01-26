@@ -12,6 +12,7 @@ extension ThingListView {
         let thingGetter: GetThingsUsecase = LocalThingsDatastore.default
         let thingCreater: CreateThingUsecase = LocalThingsDatastore.default
         let thingErrorer: CreateThingFailureUsecase = LocalThingsDatastore.default
+        let thingUpdater: UpdateThingVisibilityUsecase = LocalThingsDatastore.default
 
         func addThing() {
             thingCreater.create()
@@ -23,6 +24,10 @@ extension ThingListView {
 
         func clearAlert() {
             alertPresent = false
+        }
+
+        func updtateVisibility(thing: Thing, visibility: Bool) {
+            thingUpdater.updateVisibility(thing: thing, isVisible: visibility)
         }
 
         func getThings() {
