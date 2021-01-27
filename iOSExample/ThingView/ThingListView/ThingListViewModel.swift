@@ -9,10 +9,10 @@ extension ThingListView {
         
         var pipe: AnyCancellable?
 
-        let thingGetter: GetThingsUsecase = LocalThingsDatastore.default
-        let thingCreater: CreateThingUsecase = LocalThingsDatastore.default
-        let thingErrorer: CreateThingFailureUsecase = LocalThingsDatastore.default
-        let thingUpdater: UpdateThingVisibilityUsecase = LocalThingsDatastore.default
+        var thingGetter: GetThingsUsecase = LocalThingsDatastore.default
+        var thingCreater: CreateThingUsecase = LocalThingsDatastore.default
+        var thingErrorer: CreateThingFailureUsecase = LocalThingsDatastore.default
+        var thingUpdater: UpdateThingVisibilityUsecase = LocalThingsDatastore.default
 
         func addThing() {
             thingCreater.create()
@@ -36,10 +36,6 @@ extension ThingListView {
             }, receiveValue: { [self] (newThings) in
                 things = newThings
             })
-        }
-
-        func receivedNewThings(newThings: [Thing]) {
-            things = newThings
         }
     }
 }

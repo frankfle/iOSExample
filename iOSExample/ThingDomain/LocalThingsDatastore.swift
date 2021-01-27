@@ -5,12 +5,19 @@ class LocalThingsDatastore: CreateThingUsecase, GetThingsUsecase, CreateThingFai
 
     static let `default` = LocalThingsDatastore()
 
-    var currentThings = [Thing]()
-    var things = PassthroughSubject<[Thing], ThingError>()
+    var currentThings = [Thing]() {
+        didSet {
+            things.send(currentThings)
+        }
+    }
+    var things: CurrentValueSubject<[Thing], ThingError>
+
+    init() {
+        things = CurrentValueSubject<[Thing], ThingError>(currentThings)
+    }
 
     func create() {
         currentThings.append(Thing(name: newNameStr(), visible: false))
-        things.send(currentThings)
     }
 
     func createFailure() {
@@ -19,11 +26,11 @@ class LocalThingsDatastore: CreateThingUsecase, GetThingsUsecase, CreateThingFai
 
     func send(failure: ThingError) {
         things.send(completion: Subscribers.Completion.failure(failure))
-        things = PassthroughSubject<[Thing], ThingError>()
+        things = CurrentValueSubject<[Thing], ThingError>(currentThings)
     }
 
     func getThings() -> AnyPublisher<[Thing], ThingError> {
-        return things.delay(for: 0.3, scheduler: DispatchQueue.main).eraseToAnyPublisher()
+        return things.eraseToAnyPublisher()
     }
 
     func updateVisibility(thing: Thing, isVisible: Bool) {
@@ -33,7 +40,6 @@ class LocalThingsDatastore: CreateThingUsecase, GetThingsUsecase, CreateThingFai
         }
 
         currentThings[index] = newThingWithVisibility(oldThing: currentThings[index], visibility: isVisible)
-        things.send(currentThings)
     }
 }
 

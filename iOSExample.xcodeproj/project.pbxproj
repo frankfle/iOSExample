@@ -12,6 +12,8 @@
 		0B410FCB25BF6ED3001B9CD4 /* ThingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B410FCA25BF6ED3001B9CD4 /* ThingDetailView.swift */; };
 		0B410FD025C067FA001B9CD4 /* CreateThingFailureUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B410FCF25C067FA001B9CD4 /* CreateThingFailureUsecase.swift */; };
 		0B410FD525C0B03F001B9CD4 /* UpdateThingVisibilityUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B410FD425C0B03F001B9CD4 /* UpdateThingVisibilityUsecase.swift */; };
+		0B956EF125C1C05B0020295B /* BDDTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B956EF025C1C05B0020295B /* BDDTestHelpers.swift */; };
+		0B956EF925C1CE4A0020295B /* LocalThingsDatastoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B956EF825C1CE4A0020295B /* LocalThingsDatastoreTests.swift */; };
 		0B9A503925BB257A008A6C49 /* ThingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A503825BB257A008A6C49 /* ThingListViewModel.swift */; };
 		0B9A503E25BB28AC008A6C49 /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A503D25BB28AC008A6C49 /* Thing.swift */; };
 		0B9A504325BB3008008A6C49 /* CreateThingUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A504225BB3008008A6C49 /* CreateThingUsecase.swift */; };
@@ -20,7 +22,7 @@
 		0BFB08C125B7679400336915 /* ThingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB08C025B7679400336915 /* ThingListView.swift */; };
 		0BFB08C325B7679500336915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB08C225B7679500336915 /* Assets.xcassets */; };
 		0BFB08C625B7679500336915 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB08C525B7679500336915 /* Preview Assets.xcassets */; };
-		0BFB08D125B7679600336915 /* iOSExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB08D025B7679600336915 /* iOSExampleTests.swift */; };
+		0BFB08D125B7679600336915 /* ThingListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB08D025B7679600336915 /* ThingListViewModelTests.swift */; };
 		0BFB08DC25B7679600336915 /* iOSExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB08DB25B7679600336915 /* iOSExampleUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		0B410FCA25BF6ED3001B9CD4 /* ThingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingDetailView.swift; sourceTree = "<group>"; };
 		0B410FCF25C067FA001B9CD4 /* CreateThingFailureUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThingFailureUsecase.swift; sourceTree = "<group>"; };
 		0B410FD425C0B03F001B9CD4 /* UpdateThingVisibilityUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateThingVisibilityUsecase.swift; sourceTree = "<group>"; };
+		0B956EF025C1C05B0020295B /* BDDTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BDDTestHelpers.swift; sourceTree = "<group>"; };
+		0B956EF825C1CE4A0020295B /* LocalThingsDatastoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalThingsDatastoreTests.swift; sourceTree = "<group>"; };
 		0B9A503825BB257A008A6C49 /* ThingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingListViewModel.swift; sourceTree = "<group>"; };
 		0B9A503D25BB28AC008A6C49 /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
 		0B9A504225BB3008008A6C49 /* CreateThingUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThingUsecase.swift; sourceTree = "<group>"; };
@@ -58,7 +62,7 @@
 		0BFB08C525B7679500336915 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0BFB08C725B7679500336915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BFB08CC25B7679600336915 /* iOSExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0BFB08D025B7679600336915 /* iOSExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExampleTests.swift; sourceTree = "<group>"; };
+		0BFB08D025B7679600336915 /* ThingListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingListViewModelTests.swift; sourceTree = "<group>"; };
 		0BFB08D225B7679600336915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BFB08D725B7679600336915 /* iOSExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFB08DB25B7679600336915 /* iOSExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExampleUITests.swift; sourceTree = "<group>"; };
@@ -108,6 +112,14 @@
 				0B410FB225BF2F67001B9CD4 /* LocalThingsDatastore.swift */,
 			);
 			path = ThingDomain;
+			sourceTree = "<group>";
+		};
+		0B956EB325C1BFFB0020295B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0B956EF025C1C05B0020295B /* BDDTestHelpers.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		0B9A502D25BB2546008A6C49 /* ThingView */ = {
@@ -174,7 +186,9 @@
 		0BFB08CF25B7679600336915 /* iOSExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				0BFB08D025B7679600336915 /* iOSExampleTests.swift */,
+				0B956EB325C1BFFB0020295B /* Utilities */,
+				0BFB08D025B7679600336915 /* ThingListViewModelTests.swift */,
+				0B956EF825C1CE4A0020295B /* LocalThingsDatastoreTests.swift */,
 				0BFB08D225B7679600336915 /* Info.plist */,
 			);
 			path = iOSExampleTests;
@@ -336,7 +350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BFB08D125B7679600336915 /* iOSExampleTests.swift in Sources */,
+				0B956EF925C1CE4A0020295B /* LocalThingsDatastoreTests.swift in Sources */,
+				0B956EF125C1C05B0020295B /* BDDTestHelpers.swift in Sources */,
+				0BFB08D125B7679600336915 /* ThingListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

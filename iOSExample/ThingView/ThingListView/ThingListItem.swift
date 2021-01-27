@@ -1,10 +1,3 @@
-//
-//  ThingListItem.swift
-//  iOSExample
-//
-//  Created by Frank Fleschner on 1/25/21.
-//
-
 import SwiftUI
 
 struct ThingListItem: View {
