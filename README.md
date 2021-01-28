@@ -1,4 +1,4 @@
-#iOS Example
+# iOS Example
 
 This is a small example project to demonstrate SwiftUI/Combine in an archetecture inspired by [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) by Robert Martin.
 
@@ -33,5 +33,5 @@ The ViewModel and the Datastore are both fully unit tested, but the SwiftUI view
 tests on view code are of lower value and more difficult, even with the view being written in SwiftUI than
 other code.
 
-##Mobile Component Architecture
+## Mobile Component Architecture
 <img src="docs/mca.png" alt="Mobile Component Architecture"/>
