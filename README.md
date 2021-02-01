@@ -31,15 +31,15 @@ entities sparingly, and should be instead placed in Usecases.
 Interactors are one of the objects that can implement Usecases.  Interactors are used in more complicated
 cases where a Repository or Datastore alone won't satisfy the requirements of a Usecase.
 
+Repositories are protocols, much like Usecases, that define what interactors depend on.  It is the data
+layer's responsibility to fulfil these requirements by providing objects that implement these protocols.
+
 ### Data
 
 The data layer is concerned with retrieving and saving of data.
 
-Datastores are simple objects that can retrieve/load/save Entities.  Sometimes, they are enough to satisfy
-a Usecase.
-
-Repositories are objects that can coordinate one or more datastores.  This could be handy for caching or in
-some other way transforming raw data loaded by a datastore.
+Datastores are simple objects that can retrieve/load/save Entities.  They implement repository protocols for
+interactors to use.
 
 ### Considerations
 
