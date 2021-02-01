@@ -80,6 +80,17 @@ This app contains a single data store to manage the Things.  This is obviously a
 but normally this is where service code or disk storage code would go.  In more complex situations, it may
 be advantageous to use a Repository to manage multiple data stores. 
 
+## SwiftUI View Extraction
+
+The declarative syntax and view binding features of SwiftUI making it much easier to extract and reuse SwiftUI
+views.  With this in mind, any grouping of SwiftUI primitive views is an excellent candidate for extraction, naming,
+and reuse.  Liberal extraction will create small, easy to read, reusable views.
+
+## Swift UI Data Binding
+
+`@State` binding should be used for internal view implementations, and @ObservableObject and @EnvironmentObject should
+be used for app state objects (such as ViewModels).
+
 ## Unit Tests
 
 The ViewModel and the Datastore are both fully unit tested, but the SwiftUI views are not unit tested.  Unit
@@ -93,3 +104,4 @@ SwiftUI code could be unit tested using [this library](https://github.com/nalexn
 - [Data Essentials in SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10040/)
 ### Other Articles
 - [SwiftUI Archtecture](https://nalexn.github.io/clean-architecture-swiftui/)
+- [Avoid Massive SwiftUI Views](https://www.swiftbysundell.com/articles/avoiding-massive-swiftui-views/)
