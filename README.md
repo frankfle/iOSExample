@@ -88,15 +88,16 @@ and reuse.  Liberal extraction will create small, easy to read, reusable views.
 
 ## Swift UI Data Binding
 
-`@State` binding should be used for internal view implementations, and @ObservableObject and @EnvironmentObject should
+`@State` binding should be used for internal view implementations, and `@ObservableObject` and `@EnvironmentObject` should
 be used for app state objects (such as ViewModels).
 
 ## Unit Tests
 
-The ViewModel and the Datastore are both fully unit tested, but the SwiftUI views are not unit tested.  Unit
-tests on view code are of lower value and more difficult, even with the view being written in SwiftUI than
-other code.  Unfortunately, Views that are not unit tests still show up in the coverage report as uncovered.
-SwiftUI code could be unit tested using [this library](https://github.com/nalexn/ViewInspector), if desired.
+The ViewModel and the Datastore are both fully unit tested.  UI components, even SwiftUI components, are hard to unit test.  
+Pushing as much flow out from the UI Component into the ViewModel is the easiest way to maximize the test coverage of
+presentation code.
+
+SwiftUI code can be unit tested in conjunction with the [ViewInspector](https://github.com/nalexn/ViewInspector) library.
 
 ## SwiftUI Links
 ### WWDC Videos
