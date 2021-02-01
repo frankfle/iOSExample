@@ -103,5 +103,7 @@ SwiftUI code could be unit tested using [this library](https://github.com/nalexn
 - [Introducting SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10119)
 - [Data Essentials in SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10040/)
 ### Other Articles
+- [Robert Martin's Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Robert Martin on SOLID Relevance](https://blog.cleancoder.com/uncle-bob/2020/10/18/Solid-Relevance.html)
 - [SwiftUI Archtecture](https://nalexn.github.io/clean-architecture-swiftui/)
 - [Avoid Massive SwiftUI Views](https://www.swiftbysundell.com/articles/avoiding-massive-swiftui-views/)
