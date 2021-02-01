@@ -93,8 +93,8 @@ be used for app state objects (such as ViewModels).
 
 ## Unit Tests
 
-The ViewModel and the Datastore are both fully unit tested.  UI components, even SwiftUI components, are hard to unit test.  
-Pushing as much flow out from the UI Component into the ViewModel is the easiest way to maximize the test coverage of
+The ViewModel and the Datastore are both fully unit tested.  UI components, even SwiftUI components, are hard to unit
+test. Pushing as much flow out from the UI Component into the ViewModel is the easiest way to maximize the test coverage of
 presentation code.
 
 SwiftUI code can be unit tested in conjunction with the [ViewInspector](https://github.com/nalexn/ViewInspector) library.
