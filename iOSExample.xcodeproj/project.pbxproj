@@ -24,6 +24,7 @@
 		0BFB08C625B7679500336915 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFB08C525B7679500336915 /* Preview Assets.xcassets */; };
 		0BFB08D125B7679600336915 /* ThingListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB08D025B7679600336915 /* ThingListViewModelTests.swift */; };
 		0BFB08DC25B7679600336915 /* iOSExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB08DB25B7679600336915 /* iOSExampleUITests.swift */; };
+		DBF3AA5A2694DD4C00BEAE16 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3AA592694DD4C00BEAE16 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		0BFB08D725B7679600336915 /* iOSExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFB08DB25B7679600336915 /* iOSExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExampleUITests.swift; sourceTree = "<group>"; };
 		0BFB08DD25B7679600336915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBF3AA592694DD4C00BEAE16 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		0BFB08BD25B7679400336915 /* iOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				DBF3AA582694DD3600BEAE16 /* Views */,
 				0BFB08BE25B7679400336915 /* iOSExampleApp.swift */,
 				0B9A502D25BB2546008A6C49 /* ThingView */,
 				0BFB08C225B7679500336915 /* Assets.xcassets */,
@@ -201,6 +204,14 @@
 				0BFB08DD25B7679600336915 /* Info.plist */,
 			);
 			path = iOSExampleUITests;
+			sourceTree = "<group>";
+		};
+		DBF3AA582694DD3600BEAE16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBF3AA592694DD4C00BEAE16 /* SearchBar.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				0B9A503925BB257A008A6C49 /* ThingListViewModel.swift in Sources */,
 				0B410FD025C067FA001B9CD4 /* CreateThingFailureUsecase.swift in Sources */,
 				0B410FD525C0B03F001B9CD4 /* UpdateThingVisibilityUsecase.swift in Sources */,
+				DBF3AA5A2694DD4C00BEAE16 /* SearchBar.swift in Sources */,
 				0B410FBE25BF68A0001B9CD4 /* ThingListItem.swift in Sources */,
 				0BFB08C125B7679400336915 /* ThingListView.swift in Sources */,
 				0B410FCB25BF6ED3001B9CD4 /* ThingDetailView.swift in Sources */,
