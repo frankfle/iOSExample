@@ -3,18 +3,35 @@ import SwiftUI
 struct ThingDetailView: View {
 
     @EnvironmentObject var viewModel: ThingListView.ViewModel
+    @Environment(\.presentationMode) var presentation
 
     var thing: Thing
     @State var isVisible = false
 
     var body: some View {
-        VStack {
-            Text(thing.name)
-            Toggle("Is Visible", isOn: $isVisible)
-            Button(action: { viewModel.updtateVisibility(thing: thing, visibility: isVisible) }, label: {
+        VStack (alignment: .leading) {
+            HStack {
+                Text("Item:")
+                Spacer()
+                Text(thing.name)
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
+            HStack {
+                Toggle("Visibility:", isOn: $isVisible)
+                Image(systemName: isVisible ? "eye" : "eye.slash")
+            }
+            Button {
+                viewModel.updtateVisibility(thing: thing, visibility: isVisible)
+                presentation.wrappedValue.dismiss()
+            } label: {
                 Text("SAVE")
-            })
-        }.padding()
+                    .frame(maxWidth: .infinity)
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.blue)
+        }.padding(40)
         .onAppear(perform: {
             isVisible = thing.visible
         })
@@ -29,3 +46,4 @@ struct ThingDetailView_Previews: PreviewProvider {
         ThingDetailView(thing: Thing(name: "ASDF", visible: true))
     }
 }
+
